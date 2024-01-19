@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 export const PosterListComponent = () => {
+  const [data, setData] = useState([]);
+
   useEffect(() => {
-    const apiUrl = "http://localhost:4000/poster/list";
+    const apiUrl = "http://localhost:3000/posters";
     const token = "Bearer YOUR_TOKEN"; // Erstat "YOUR_TOKEN" med din faktiske Bearer Token
 
     const headers = {
@@ -11,19 +13,37 @@ export const PosterListComponent = () => {
     };
 
     const params = {
-      sort_key: "name",
-      sort_direction: "desc",
+      sort_key: "random",
+      limit: "2",
+      attributes: "name,description,image",
     };
 
     axios
       .get(apiUrl, { headers, params })
       .then((response) => {
-        console.log("List of posters:", response.data);
+        setData(response.data); // Set the fetched data to the state
+        console.log(data);
       })
       .catch((error) => {
         console.error("Error fetching posters:", error);
       });
   }, []);
 
-  return <div>Loading posters...</div>;
+  // You can also log the current state here if needed
+
+  return (
+    <>
+      {data.map((post) => (
+        <article key={post.id}>
+          <img src={post.image} alt="" />
+          <div>
+            <h3>{post.name}</h3>
+            <div dangerouslySetInnerHTML={{ __html: post.description }} />
+            {/* Add more fields as needed */}
+          </div>
+          <a href="">Læs Mere</a>
+        </article>
+      ))}
+    </>
+  );
 };

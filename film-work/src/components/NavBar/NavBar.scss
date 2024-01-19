@@ -1,0 +1,38 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: last baseline;
+  border-bottom: 1px solid black;
+  width: 100%;
+  position: relative;
+  padding: 0px 0px 10px 40px;
+  background-color: white;
+  h2 {
+    color: #d97852;
+    font-size: 54px;
+  }
+  i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .list {
+    display: flex;
+
+    .listOrder {
+      list-style-type: none;
+      padding: 7px 15px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 18px;
+      .fix {
+        text-decoration: none;
+        color: black;
+      }
+      .fix:hover {
+        color: #d97852;
+      }
+    }
+  }
+}

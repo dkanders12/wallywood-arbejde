@@ -1,23 +1,18 @@
 import React from "react";
-
+import { PosterListComponent } from "../../components/List/list";
+import "./Home.scss";
+import curtain from "../../assets/Img/curten.png";
+import { Footer } from "../../components/Footer/footer";
 export const Home = () => {
   return (
     <>
-      <section>
-        <img src="" alt="" />
-        <main>
-          <h2>Sidste nyt…</h2>
-          <article>
-            <img src="" alt="" />
-            <div className="right-side">
-              <h3></h3>
-              <p></p>
-              <p></p>
-              <a href="">Læs mere</a>
-            </div>
-          </article>
-        </main>
+      <header>
+        <img src={curtain} alt="" />
+      </header>
+      <section className="RandomPoster">
+        <PosterListComponent></PosterListComponent>
       </section>
+      <Footer></Footer>
     </>
   );
 };

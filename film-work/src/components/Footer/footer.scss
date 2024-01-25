@@ -1,0 +1,30 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px 15px;
+  background-color: white;
+  border-top: 1px solid #cccccc;
+  .left {
+    p {
+      font-size: 16px;
+      color: #524641;
+    }
+    h4 {
+      color: #d97852;
+    }
+  }
+  .middle {
+    p {
+      font-size: 15px;
+      color: #524641;
+    }
+  }
+  .right {
+    gap: 10px;
+    display: flex;
+    i {
+      font-size: 28px;
+      color: #cccccc;
+    }
+  }
+}

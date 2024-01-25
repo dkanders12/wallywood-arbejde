@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./list.scss";
 
 export const PosterListComponent = () => {
   const [data, setData] = useState([]);
@@ -22,7 +23,7 @@ export const PosterListComponent = () => {
       .get(apiUrl, { headers, params })
       .then((response) => {
         setData(response.data); // Set the fetched data to the state
-        console.log(data);
+        console.log(response.data);
       })
       .catch((error) => {
         console.error("Error fetching posters:", error);
@@ -39,9 +40,8 @@ export const PosterListComponent = () => {
           <div>
             <h3>{post.name}</h3>
             <div dangerouslySetInnerHTML={{ __html: post.description }} />
-            {/* Add more fields as needed */}
+            {/* Add more fields as needed */} <a href="#">Læs Mere</a>
           </div>
-          <a href="">Læs Mere</a>
         </article>
       ))}
     </>

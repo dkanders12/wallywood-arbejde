@@ -1,0 +1,32 @@
+img {
+  width: 140px;
+  height: 208px;
+  margin-right: 10px;
+}
+article {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    height: 308px;
+    h3 {
+      font-size: 22px;
+    }
+    a {
+      text-decoration: none;
+      padding: 7px 10px;
+      background-color: #d1b3a7;
+      width: 101px;
+      justify-content: center;
+      display: flex;
+      color: black;
+      border-radius: 5px;
+      border: solid black 1px;
+    }
+  }
+}

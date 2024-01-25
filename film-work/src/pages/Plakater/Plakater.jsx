@@ -1,9 +1,7 @@
 import React from "react";
-import { PosterListComponent } from "../../components/List/list";
+import { Footer } from "../../components/Footer/footer";
+import { PlakatGenre } from "../../components/Plakat.genre/Plakat.genre";
 export const Plakater = () => {
-  return (
-    <div>
-      <PosterListComponent></PosterListComponent>
-    </div>
-  );
+  return <PlakatGenre></PlakatGenre>;
+  <Footer></Footer>;
 };

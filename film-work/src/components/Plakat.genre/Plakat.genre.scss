@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  background-color: white;
+  .sideBar {
+    display: flex;
+    flex-direction: column;
+  }
+  .sellList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    gap: 20px;
+    margin-left: auto;
+    .posterContainer {
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 194px;
+        height: 264px;
+      }
+      .posterName {
+        width: 150px;
+      }
+    }
+  }
+}

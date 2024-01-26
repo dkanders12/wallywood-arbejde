@@ -1,11 +1,10 @@
 import React from "react";
 import { Footer } from "../../components/Footer/footer";
-import { kontaktForm } from "../../components/Kontakt/kontakt";
-
+import { FormKontakt } from "../../components/Kontakt/kontakt.jsx";
 export const Kontakt = () => {
   return (
     <>
-      <kontaktForm></kontaktForm>
+      <FormKontakt></FormKontakt>
       <Footer></Footer>
     </>
   );

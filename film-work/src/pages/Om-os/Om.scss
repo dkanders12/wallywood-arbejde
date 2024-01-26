@@ -1,0 +1,27 @@
+section {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  .mainOm {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    padding: 0px 30px;
+    height: 600px;
+    div {
+      width: 500px;
+      margin-bottom: 120px;
+      h2 {
+        color: #d97852;
+        margin-bottom: 20px;
+        font-size: 30px;
+      }
+    }
+    img {
+      width: 335px;
+      height: 335px;
+    }
+  }
+}

@@ -81,57 +81,73 @@ export const PlakatGenre = () => {
 
   return (
     <>
-      <header className="TopSortBy"></header>
       <section className="main">
+        <div className="sorter">
+          <p>Sorter</p>
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
         <div className="sideBar">
-          <a href="#" onClick={() => handleGenreChange(20)}>
-            KarateFilm
-          </a>
-          <a href="#" onClick={() => handleGenreChange(10)}>
-            Disney
-          </a>
-          <a href="#" onClick={() => handleGenreChange(8)}>
-            Westen
-          </a>
-          <a href="#" onClick={() => handleGenreChange(6)}>
-            Komedie
-          </a>
-          <a href="#" onClick={() => handleGenreChange(13)}>
-            Romantik
-          </a>
-          <a href="#" onClick={() => handleGenreChange(1)}>
-            Drama
-          </a>
-          <a href="#" onClick={() => handleGenreChange(22)}>
-            Marvel Og DC
-          </a>
-          <a href="#" onClick={() => handleGenreChange(9)}>
-            Adventure
-          </a>
-          <a href="#" onClick={() => handleGenreChange(3)}>
-            Thriller
-          </a>
-          <a href="#" onClick={() => handleGenreChange(16)}>
-            KrigsFilm
-          </a>
-          <a href="#" onClick={() => handleGenreChange(2)}>
-            Musik
-          </a>
-          <a href="#" onClick={() => handleGenreChange(12)}>
-            Gysere
-          </a>
-          <a href="#" onClick={() => handleGenreChange(11)}>
-            Danske Film
-          </a>
-          <a href="#" onClick={() => handleGenreChange(4)}>
-            Børne - Familiefilm
-          </a>
-          <a href="#" onClick={() => handleGenreChange(5)}>
-            Science Fiction
-          </a>
-          <a href="#" onClick={() => handleGenreChange(7)}>
-            Action
-          </a>
+          <div>
+            <h2 className="big">Plakater</h2>
+            <h2>Filtre</h2>
+          </div>
+          <div className="aContainer">
+            <a href="#" onClick={() => handleGenreChange(20)}>
+              KarateFilm
+            </a>
+            <a href="#" onClick={() => handleGenreChange(10)}>
+              Disney
+            </a>
+            <a href="#" onClick={() => handleGenreChange(8)}>
+              Westen
+            </a>
+            <a href="#" onClick={() => handleGenreChange(6)}>
+              Komedie
+            </a>
+            <a href="#" onClick={() => handleGenreChange(13)}>
+              Romantik
+            </a>
+            <a href="#" onClick={() => handleGenreChange(1)}>
+              Drama
+            </a>
+            <a href="#" onClick={() => handleGenreChange(22)}>
+              Marvel Og DC
+            </a>
+            <a href="#" onClick={() => handleGenreChange(9)}>
+              Adventure
+            </a>
+            <a href="#" onClick={() => handleGenreChange(3)}>
+              Thriller
+            </a>
+            <a href="#" onClick={() => handleGenreChange(16)}>
+              KrigsFilm
+            </a>
+            <a href="#" onClick={() => handleGenreChange(2)}>
+              Musik
+            </a>
+            <a href="#" onClick={() => handleGenreChange(12)}>
+              Gysere
+            </a>
+            <a href="#" onClick={() => handleGenreChange(11)}>
+              Danske Film
+            </a>
+            <a href="#" onClick={() => handleGenreChange(4)}>
+              Børne - Familiefilm
+            </a>
+            <a href="#" onClick={() => handleGenreChange(5)}>
+              Science Fiction
+            </a>
+            <a href="#" onClick={() => handleGenreChange(7)}>
+              Action
+            </a>
+          </div>
+          <div className="Price">
+            <h4>Prisområde</h4>
+            <input type="text" placeholder="0" />
+            --
+            <input type="text" placeholder="3800" />
+            kr.
+          </div>
         </div>
         <div className="sellList">
           {filteredData.map((post) => (

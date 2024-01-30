@@ -1,42 +1,3 @@
-/*import { useState, useEffect } from "react";
-import axios from "axios";
-import "./Plakat.genre.scss";
-
-export const PlakatGenre = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    const apiUrl = "http://localhost:3000/posters";
-    const token = "Bearer YOUR_TOKEN";
-
-    const headers = {
-      Authorization: token,
-    };
-    const params = {
-      attributes: "name,image",
-    };
-    axios
-      .get(apiUrl, { headers, params })
-      .then((response) => {
-        setData(response.data);
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error("error fetching", error);
-      });
-  }, []);
-
-  return (
-    <>
-      {data.map((post) => (
-        <article key={post.id}>
-          <img src={post.image} alt=""></img>
-          <h3>{post.name}</h3>
-          <a href="">Læg i kurven</a>
-        </article>
-      ))}
-    </>
-  );
-};*/
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Plakat.genre.scss";
@@ -79,12 +40,20 @@ export const PlakatGenre = () => {
       )
     : data;
 
+  function Sorter() {
+    document.querySelector(".sorter").classList.toggle("active");
+  }
+
   return (
     <>
       <section className="main">
-        <div className="sorter">
+        <div className="sorter" onClick={() => Sorter()}>
           <p>Sorter</p>
           <i class="fa-solid fa-arrow-down"></i>
+          <div className="Hidden">
+            <p>Low price</p>
+            <p>High price</p>
+          </div>
         </div>
         <div className="sideBar">
           <div>

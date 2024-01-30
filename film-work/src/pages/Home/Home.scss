@@ -1,5 +1,6 @@
 .RandomPoster {
   display: flex;
+
   background-color: #f9f9f9;
   justify-content: center;
   align-items: first baseline;
@@ -12,5 +13,25 @@ header {
   img {
     width: 100%;
     border-radius: 3px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .RandomPoster {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f9f9f9;
+    justify-content: center;
+    align-items: first baseline;
+    gap: 0px;
+    height: 100%;
+    padding-bottom: 30px;
+  }
+  header {
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+    img {
+      width: 100%;
+      border-radius: 3px;
+    }
   }
 }

@@ -17,10 +17,10 @@ export const Footer = () => {
         </p>
       </div>
       <div className="right">
-        <i class="fa-brands fa-square-pinterest"></i>
-        <i class="fa-brands fa-square-instagram"></i>
-        <i class="fa-brands fa-square-facebook"></i>
-        <i class="fa-brands fa-square-twitter"></i>
+        <i className="fa-brands fa-square-pinterest"></i>
+        <i className="fa-brands fa-square-instagram"></i>
+        <i className="fa-brands fa-square-facebook"></i>
+        <i className="fa-brands fa-square-twitter"></i>
       </div>
     </footer>
   );

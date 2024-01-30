@@ -3,10 +3,10 @@
   background-color: #f9f9f9;
   position: relative;
   .sorter {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     position: absolute;
     width: 170px;
     border-radius: 5px;
@@ -15,11 +15,31 @@
     height: 40px;
     top: 35px;
     right: 60px;
+    .Hidden {
+      display: none;
+    }
     i {
       margin-right: 10px;
     }
     p {
       margin-left: 20px;
+    }
+  }
+  .sorter.active {
+    .Hidden {
+      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      position: absolute;
+      height: 80px;
+      width: 168px;
+      border: 1px solid black;
+      top: 40px;
+      background-color: white;
+      border-radius: 4px;
+      z-index: 3;
     }
   }
   .sideBar {
@@ -67,7 +87,7 @@
       flex-direction: column;
       justify-content: space-between;
       text-align: center;
-      height: 400px;
+      height: 470px;
       a {
         text-decoration: none;
         color: black;
@@ -84,5 +104,10 @@
         width: 150px;
       }
     }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .main {
+    height: 100%;
   }
 }

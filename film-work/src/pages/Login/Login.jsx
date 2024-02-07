@@ -1,10 +1,10 @@
 import React from "react";
 import { Footer } from "../../components/Footer/footer";
-import { LoginForm } from "../../components/Login/login";
+import { AuthForm } from "../../components/FormAuth/Form.padlet";
 export const Login = () => {
   return (
     <>
-      <LoginForm />
+      <AuthForm></AuthForm>
       <Footer></Footer>
     </>
   );

@@ -6,11 +6,7 @@ import GenreController from "../Controllers/genre.controller.js";
 import UserPostController from "../Controllers/userpost.controller.js";
 
 const AppRouter = express.Router();
-const userPostControl = new UserPostController();
 
-AppRouter.post("/users", Authorize, (req, res) => {
-  userPostControl.create(req, res);
-});
 // Poster Routes
 const posterControl = new PosterController();
 AppRouter.get("/posters", (req, res) => {

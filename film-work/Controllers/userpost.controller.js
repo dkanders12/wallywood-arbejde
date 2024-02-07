@@ -46,20 +46,44 @@ class UserPostController {
    */
   create = async (req, res) => {
     try {
-      const { fistname, email } = req.body;
+      const {
+        firstname,
+        lastname,
+        email,
+        password,
+        active,
+        org_id,
+        refresh_token,
+        groups,
+      } = req.body;
 
-      if (firstname && email) {
-        const model = await UserPostModel.create({
-          fistname,
+      if (
+        firstname &&
+        lastname &&
+        email &&
+        password &&
+        active &&
+        org_id &&
+        refresh_token &&
+        groups
+      ) {
+        const userModel = await UserPostModel.create({
+          firstname,
+          lastname,
           email,
+          password, // Note: You should hash the password before storing it in the database for security.
+          active,
+          org_id,
+          refresh_token,
+          groups,
         });
 
-        res.json({ newId: model.id });
+        res.json({ newId: userModel.id });
       } else {
         res.sendStatus(418); // I'm a teapot (or any other appropriate status code)
       }
     } catch (error) {
-      console.error("Error during contact creation:", error);
+      console.error("Error during user creation:", error);
       res.sendStatus(500); // Internal Server Error
     }
   };
